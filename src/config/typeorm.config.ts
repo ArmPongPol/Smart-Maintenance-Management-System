@@ -20,8 +20,13 @@ export function buildTypeOrmOptions(
     username: config.get<string>('database.username'),
     password: config.get<string>('database.password'),
     database: config.get<string>('database.database'),
+    // rejectUnauthorized: false accepts any certificate (MITM-able); only turn
+    // it off for providers with self-signed certs you can't supply a CA for.
     ssl: config.get<boolean>('database.ssl')
-      ? { rejectUnauthorized: false }
+      ? {
+          rejectUnauthorized:
+            config.get<boolean>('database.sslRejectUnauthorized') ?? true,
+        }
       : false,
     autoLoadEntities: true,
     synchronize,

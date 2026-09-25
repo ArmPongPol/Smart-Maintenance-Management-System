@@ -4,7 +4,7 @@ export default registerAs('app', () => ({
   name: process.env.APP_NAME,
   env: process.env.NODE_ENV,
   port: parseInt(process.env.PORT || '3001', 10),
-  apiPrefis: process.env.API_PREFIX,
+  apiPrefix: process.env.API_PREFIX,
   apiVersion: process.env.API_VERSION,
   corsOrigins: (process.env.CORS_ORIGINS || '')
     .split(',')

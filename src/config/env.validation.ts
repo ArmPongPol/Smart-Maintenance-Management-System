@@ -39,6 +39,7 @@ export const envValidationSchema = Joi.object({
   }),
   DB_LOGGING: booleanString(),
   DATABASE_SSL: booleanString(),
+  DATABASE_SSL_REJECT_UNAUTHORIZED: booleanString(),
 
   // docs
   DOCS_ENABLED: booleanString(),

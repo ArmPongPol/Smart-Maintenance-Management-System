@@ -1,7 +1,7 @@
 export enum UserRoleEnum {
   ADMIN = 'ADMINISTRATOR',
   LEADER = 'LEADER',
-  TECHINIAN = 'TECHNICIAN',
+  TECHNICIAN = 'TECHNICIAN',
   OPERATOR = 'OPERATOR',
 }
 
@@ -11,7 +11,7 @@ export enum UserStatusEnum {
 }
 
 export enum MachineStatusEnum {
-  RUUING = 'RUNNING',
+  RUNNING = 'RUNNING',
   STOPPED = 'STOPPED',
   MAINTENANCE = 'MAINTENANCE',
   INACTIVE = 'INACTIVE',

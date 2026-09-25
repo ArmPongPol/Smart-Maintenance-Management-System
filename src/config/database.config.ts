@@ -9,4 +9,6 @@ export default registerAs('database', () => ({
   synchronize: String(process.env.DATABASE_SYNCHRONIZE || 'false') === 'true',
   logging: String(process.env.DB_LOGGING || 'false') === 'true',
   ssl: String(process.env.DATABASE_SSL || 'false') === 'true',
+  sslRejectUnauthorized:
+    String(process.env.DATABASE_SSL_REJECT_UNAUTHORIZED || 'true') === 'true',
 }));

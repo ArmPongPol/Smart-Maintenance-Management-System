@@ -1,12 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, Column } from 'typeorm';
 import { UserRoleEnum, UserStatusEnum } from '../../../common/constants/enum';
+import { BaseEntity } from '@/common/entities/base.entity';
 
 // "user" is a reserved word in Postgres, so the table is named "users".
 @Entity({ name: 'users' })
-export class User {
-  @PrimaryGeneratedColumn()
-  id: number;
-
+export class User extends BaseEntity {
   @Column({
     name: 'email',
     type: 'varchar',
